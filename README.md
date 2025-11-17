@@ -4,7 +4,20 @@
 
 PneumoSynthAI is a state-of-the-art AI system designed for accurate and interpretable pneumonia diagnosis using chest X-ray images. This advanced framework integrates powerful convolutional neural networks (CNNs) to extract rich visual features and multi-label disease predictions with reinforcement learning (RL) to adaptively generate diagnostic reports and clinical decision support. The system incorporates Grad-CAM to provide transparent visual explanations of the model’s focus areas, aiding clinical trust and interpretability.
 
-![Screenshot 2025-11-17 214219.png]([https://github.com/user-attachments/assets/9a720a4e-9cc1-4e36-a292-9ce4ff601c9d](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20214219.png))
+![Screenshot 2025-11-17 214219](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20214219.png)
+
+![Screenshot 2025-11-17 215013](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20215013.png)
+
+![Screenshot 2025-11-17 220207](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20220207.png)
+
+![Screenshot 2025-11-17 220554](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20220554.png)
+
+![Screenshot 2025-11-17 221441](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20221441.png)
+
+![Screenshot 2025-11-17 222848](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20222848.png)
+
+![Screenshot 2025-11-17 223804](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20223804.png)
+
 
 ---
 
@@ -62,4 +75,5 @@ Please support this project by starring the repository ⭐ if you find it useful
 ---
 
 *This project exemplifies the future of AI-driven healthcare, advancing transparency, adaptability, and reliability in medical image analysis.*
+
 
