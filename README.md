@@ -13,7 +13,7 @@ Thorough Evaluation: Output metrics and agent performance presented visually.
 
 📈 System Architecture
 Level 0: Context Diagram
-![System Context](SCREENSHOTS/Screenshot-202 1: Complete Data Flow
+![Alt text](SCREENSHOTS/Screenshot-202 1: Complete Data Flow
 
 ![Level 1 Pipeline](SCREENSHOTS/Screenshot-202
 
@@ -49,3 +49,4 @@ Place CXR images and these screenshots in the SCREENSHOTS folder.
 Follow repo scripts to preprocess data, train, test, and visualize.
 
 Upload new X-rays to test and view explainable outputs.
+
