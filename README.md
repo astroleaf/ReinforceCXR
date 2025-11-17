@@ -1,151 +1,51 @@
-# 🚀 PneumoSynthAI: Modern, Explainable Pneumonia Detection System
+🚀 PneumoSynthAI: Modern, Explainable Pneumonia Detection with RL
+🩺 Overview
+PneumoSynthAI is an end-to-end AI system for fast, accurate, and explainable pneumonia diagnosis from chest X-rays. It combines powerful CNN models and Grad-CAM-based interpretability with a reinforcement learning agent for advanced, adaptive reporting and clinical feedback.
 
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20214036.jpg" width="700">
-  <br>
-  <b>Intelligent Data Flow from Patient Input to Diagnosis</b>
-</div>
+🌟 What’s Unique?
+Hybrid AI: CNN vision+ RL for next-gen automated, explainable medical reporting.
 
----
+Full Transparency: Every result visualized with Grad-CAM overlays.
 
-## 🩺 Overview
+Visual Documentation: Every workflow and system stage shown below via real screenshots.
 
-**PneumoSynthAI** is a modern AI pipeline for pneumonia detection and reporting from chest X-rays that fuses high-accuracy deep neural networks, reinforcement learning, and explainability, building an adaptive, trustworthy diagnosis/reporting engine for clinicians.
+Thorough Evaluation: Output metrics and agent performance presented visually.
 
----
+📈 System Architecture
+Level 0: Context Diagram
+![System Context](SCREENSHOTS/Screenshot-202 1: Complete Data Flow
 
-## 🌟 What Makes This Project Unique?
+![Level 1 Pipeline](SCREENSHOTS/Screenshot-202
 
-- **Hybrid AI:** Deep CNNs (CheXNet/VGG19) + RL for adaptive, automated, explainable reporting.
-- **Full Transparency:** All decisions traceable through Grad-CAM overlays.
-- **Complete Automation:** Upload to result, all steps are visible and robustly engineered.
+🧩 Module Flow Breakdowns
+Preprocessing Module
+![Preprocessing](SCREENSHOTS/Screenshot-202 Feature Extraction
 
----
+![CNN Features](SCREENSHOTS/Screenshot-202-CAM Explainability
 
-## 📈 Data Flow Architecture
+![GradCAM DFD](SCREENSHOTS/Screenshot-202 Agent Module
 
-### Level 0: System Context
+![RL Agent DFD](SCREENSHOTS/Screenshot-202 & Delivery Module
 
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20214036.jpg" width="600">
-  <br>
-  <i>Level 0: Overall context — user to output</i>
-</div>
+![Diagnosis & Report](SCREENSHOTS/Screenshot-202
 
-### Level 1: High-level Pipeline
+🤖 RL Agent Core
+![RL Agent Core](SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202
 
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20215013.jpg" width="900">
-  <br>
-  <i>Level 1: Entire processing flow from image to report</i>
-</div>
+📊 Model Outputs & Visualization
+Sample Disease Probabilities
+![Output 1](SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202 Performance
 
----
+![Bar Chart](SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202-Class & Grad-CAM
 
-## 🧩 Module-by-Module Flows
+![Class Table](SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202SCREENSHOTS/Screenshot-202
 
-### Preprocessing
+📁 Dataset
+NIH ChestX-ray14 (Official Download Link)
 
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20220207.jpg" width="700">
-  <br>
-  <i>Resize, normalize, augment for robust X-ray input</i>
-</div>
+🚦 Usage
+Place CXR images and these screenshots in the SCREENSHOTS folder.
 
-### CNN Feature Extraction
+Follow repo scripts to preprocess data, train, test, and visualize.
 
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20220554.jpg" width="700">
-  <br>
-  <i>CNN module: how AI "sees" and processes chest X-rays</i>
-</div>
-
-### Grad-CAM Explainability
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20222848.jpg" width="700">
-  <br>
-  <i>Visualizing the model's decision focus</i>
-</div>
-
-### RL Agent Module
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20223804.jpg" width="700">
-  <br>
-  <i>Reinforcement learning workflow: adaptive, feedback-driven diagnosis</i>
-</div>
-
-### Diagnosis & Report
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20221441.jpg" width="700">
-  <br>
-  <i>Bringing outputs and visual explanations together for clinicians</i>
-</div>
-
----
-
-## 🤖 RL Agent — Core Logic and Output
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20232832.jpg" width="520">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20232859.jpg" width="420">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20232910.jpg" width="500">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20232926.jpg" width="550">
-  <br>
-  <i>RL agent flow, learning, and performance metrics</i>
-</div>
-
----
-
-## 📊 Output & Visualizations
-
-### Sample Output: Disease Probabilities
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20214219.jpg" width="370">
-  <img src="SCREENSHOTS/Screenshot%202025-11-17%20215136.jpg" width="370">
-</div>
-
-### Model Performance: Accuracy & Loss
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20105037.jpg" width="340">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20094017.jpg" width="340">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20065835.jpg" width="340">
-</div>
-
-### Classwise Predictions & Grad-CAM Overlays
-
-<div align="center">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20065436.jpg" width="420">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20103931.jpg" width="420">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20065412.jpg" width="400">
-  <img src="SCREENSHOTS/Screenshot%202025-11-15%20070443.jpg" width="400">
-</div>
-
----
-
-## 📁 Dataset
-
-- **NIH ChestX-ray14** ([Official Download](https://nihcc.app.box.com/v/ChestXray-NIHCC))
-
----
-
-## 🚦 How to Run
-
-1. Place CXR images as required, put all screenshots in `/SCREENSHOTS/` using exact filenames.
-2. Run provided scripts for preprocessing, training, RL agent, etc.
-3. Test uploads and see all output/visualizations drop into place.
-
----
-
-## 💡 Contact & Contribution
-
-Questions or suggestions? Open an issue or PR here on GitHub.
-Give us a ⭐ if our work helps your research!
-
----
-
-<em>All screenshots above are generated from the actual pipeline and can be viewed in the SCREENSHOTS directory.</em>
+Upload new X-rays to test and view explainable outputs.
