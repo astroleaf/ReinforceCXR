@@ -1,52 +1,45 @@
-PneumoSynthAI: Intelligent & Explainable Pneumonia Detection
-![Banner](Screenshot-2025-11-17-214
+🚀 PneumoSynthAI: Modern, Explainable Pneumonia Detection System
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-214036.jpg" width="700"><br> <b>Intelligent Data Flow from Patient Input to Diagnosis</b> </div>
+🩺 Project Overview
+PneumoSynthAI is a cutting-edge, AI-driven pipeline for pneumonia detection and reporting from chest X-rays. The system blends high-accuracy deep neural networks with reinforcement learning and visual explainability, creating a transparent and adaptive diagnosis assistant for clinical use.
 
-PneumoSynthAI is a next-generation, explainable AI system for automated pneumonia detection and report generation from chest X-ray images. By combining deep convolutional neural networks (CNNs) with reinforcement learning (RL), this project delivers accurate diagnosis, visual explanations, and RL-driven adaptive reporting—offering medical professionals reliable, actionable, and transparent insights.
+🌟 What Makes This Project Unique?
+Hybrid AI: Combines proven CNNs (CheXNet/VGG19) for visual diagnosis and RL for adaptive report generation.
 
-Key Contributions & Uniqueness
-Hybrid Deep Learning & RL: Merges state-of-the-art CNNs (CheXNet/VGG19) with a reinforcement learning agent for adaptive decision-making and report generation.
+Full Transparency: Grad-CAM heatmaps pinpoint what the AI "sees" in each X-ray.
 
-Explainable AI: Integrates Grad-CAM for interpretability, highlighting critical regions that drive model predictions.
+End-to-End Automation: From upload, through preprocessing, deep inference, RL-enhanced reporting, and result delivery.
 
-Automated Workflow: Offers robust preprocessing, feature extraction, disease classification, visualization, and a smart RL diagnosis/report engine.
+Comprehensive Visualization: Every phase explained visually (see diagrams below).
 
-Comprehensive Visual Documentation: Full data flow diagrams and system outputs illustrate every phase for clarity and reproducibility.
-
-Data Flow Architecture
-Level 0 Data Flow Model
-![Level 0 DFD](Screenshot-2025-11-17-214 1 Data Flow Diagram
-
-![Level 1 DFD](Screenshot-2025-11-17-215 Module Flows
-
-Preprocessing Module
-![Preprocessing DFD](Screenshot-2025-11-17-220 Feature Extraction Module
-
-![CNN Module DFD](Screenshot-2025-11-17-220-CAM Explainability Module
-
-![Grad-CAM Module DFD](Screenshot-2025-11-17-222 Agent Module
-
-![RL Agent DFD](Screenshot-2025-11-17-223 & Report Delivery Module
-
-![Diagnosis Module DFD](Screenshot-2025-11-17-221 Agent Core Workflow
-
-![RL Agent Core](Screenshot-2025-11-17-232Screenshot-2025-11-17-232Screenshot-2025-11-17-232Screenshot-2025-11-17-232 Output Visualizations
-
-Model Outputs
-Diagnosis Probability Table
-![Sample Output 1](Screenshot-2025-11-17-214Screenshot-2025-11-17-215**
-![Bar Chart](Screenshot-2025-11-15-105 Epochs**
-![Accuracy Graph](Screenshot-2025-11-15-094 Epochs**
-![Loss Graph](Screenshot-2025-11-15-065ability
-
+🖇️ Data Flow Architecture
+Level 0: Context Diagram
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-214036.jpg" width="600"><br> <em>Level 0 Dataflow — system context overview</em> </div>
+Level 1: Overall System Pipeline
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-215013.jpg" width="850"><br> <em>Level 1 DFD — high-level system architecture</em> </div>
+🔎 Module-by-Module Breakdown
+Preprocessing Pipeline
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-220207.jpg" width="700"><br> <em>Resizing, normalization, and augmentation flow</em> </div>
+Deep Feature Extraction (CNN Module)
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-220554.jpg" width="700"><br> <em>How the CNN analyzes X-ray structures</em> </div>
+Grad-CAM Explainability
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-222848.jpg" width="700"><br> <em>Grad-CAM module highlights model reasoning</em> </div>
+Reinforcement Learning Agent
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-223804.jpg" width="700"><br> <em>RL Agent: Adaptive diagnostic decision-making</em> </div>
+Diagnosis & Report Delivery
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-221441.jpg" width="700"><br> <em>Final aggregation and delivery to user</em> </div>
+🤖 RL Agent — Deep Dive
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-232832.jpg" width="650"><br> <img src="SCREENSHOTS/Screenshot-2025-11-17-232859.jpg" width="600"><br> <img src="SCREENSHOTS/Screenshot-2025-11-17-232910.jpg" width="600"><br> <img src="SCREENSHOTS/Screenshot-2025-11-17-232926.jpg" width="650"><br> <em>RL state processing, agent logic, and performance summary</em> </div>
+📊 Output & Interpretability
+Sample Output: Prediction Table
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-17-214219.jpg" width="450"> <img src="SCREENSHOTS/Screenshot-2025-11-17-215136.jpg" width="450"><br> </div>
+Accuracy & Loss Curves
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-15-105037.jpg" width="450"> <img src="SCREENSHOTS/Screenshot-2025-11-15-094017.jpg" width="450"> <img src="SCREENSHOTS/Screenshot-2025-11-15-065835.jpg" width="450"><br> </div>
+Per-class Prediction Visualization
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-15-065436.jpg" width="450"> <img src="SCREENSHOTS/Screenshot-2025-11-15-103931.jpg" width="450"><br> </div>
 Grad-CAM Overlays
-![Grad-CAM Single](Screenshot-2025-11-15-065Screenshot-2025-11-15-065Screenshot-2025-11-15-103 Details
+<div align="center"> <img src="SCREENSHOTS/Screenshot-2025-11-15-065412.jpg" width="400"> <img src="SCREENSHOTS/Screenshot-2025-11-15-070443.jpg" width="400"><br> </div>
+📁 Dataset
+NIH ChestX-ray14 (Dataset Link)
 
-Dataset: NIH ChestX-ray14 (official link)
-
-Technologies: Python, PyTorch, Grad-CAM, RL (policy gradient methods), Matplotlib, OpenCV
-
-Key Models: CheXNet, VGG19, Custom RL Agent
-
-Outputs: Disease probabilities, interpretability overlays, automated reports
-
-Evaluation: Accuracy, loss, per-class metrics, and RL agent performance
+Organized and processed for robust AI analysis.
