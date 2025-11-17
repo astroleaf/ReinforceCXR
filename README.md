@@ -1,53 +1,52 @@
-# CheXNet for Classification and Localization of Thoracic Diseases
+PneumoSynthAI: Intelligent & Explainable Pneumonia Detection
+![Banner](Screenshot-2025-11-17-214
 
-This is a Python3 (Pytorch) reimplementation of [CheXNet](https://stanfordmlgroup.github.io/projects/chexnet/). The model takes a chest X-ray image as input and outputs the probability of each thoracic disease along with a likelihood map of pathologies.
+PneumoSynthAI is a next-generation, explainable AI system for automated pneumonia detection and report generation from chest X-ray images. By combining deep convolutional neural networks (CNNs) with reinforcement learning (RL), this project delivers accurate diagnosis, visual explanations, and RL-driven adaptive reporting—offering medical professionals reliable, actionable, and transparent insights.
 
-<div align=center><img width="500" height="500" src="./localization/00008473_011-3.png"/></div>
+Key Contributions & Uniqueness
+Hybrid Deep Learning & RL: Merges state-of-the-art CNNs (CheXNet/VGG19) with a reinforcement learning agent for adaptive decision-making and report generation.
 
-## Dataset
+Explainable AI: Integrates Grad-CAM for interpretability, highlighting critical regions that drive model predictions.
 
-The [ChestX-ray14 dataset](http://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_ChestX-ray8_Hospital-Scale_Chest_CVPR_2017_paper.pdf) comprises 112,120 frontal-view chest X-ray images of 30,805 unique patients with 14 disease labels. To evaluate the model, we randomly split the dataset into training (70%), validation (10%) and test (20%) sets, following the work in paper. Partitioned image names and corresponding labels are placed under the directory [labels](./ChestX-ray14/labels).
+Automated Workflow: Offers robust preprocessing, feature extraction, disease classification, visualization, and a smart RL diagnosis/report engine.
 
-## Prerequisites
+Comprehensive Visual Documentation: Full data flow diagrams and system outputs illustrate every phase for clarity and reproducibility.
 
-- Python 3.4+
-- [PyTorch](http://pytorch.org/) and its dependencies
+Data Flow Architecture
+Level 0 Data Flow Model
+![Level 0 DFD](Screenshot-2025-11-17-214 1 Data Flow Diagram
 
-## Usage
+![Level 1 DFD](Screenshot-2025-11-17-215 Module Flows
 
-1. Clone this repository.
+Preprocessing Module
+![Preprocessing DFD](Screenshot-2025-11-17-220 Feature Extraction Module
 
-2. Download images of ChestX-ray14 from this [released page](https://nihcc.app.box.com/v/ChestXray-NIHCC) and decompress them to the directory [images](./ChestX-ray14/images).
+![CNN Module DFD](Screenshot-2025-11-17-220-CAM Explainability Module
 
-3. Specify one or multiple GPUs and run
+![Grad-CAM Module DFD](Screenshot-2025-11-17-222 Agent Module
 
-   `python model.py`
+![RL Agent DFD](Screenshot-2025-11-17-223 & Report Delivery Module
 
-## Comparsion
+![Diagnosis Module DFD](Screenshot-2025-11-17-221 Agent Core Workflow
 
-We followed the training strategy described in the official paper, and a ten crop method is adopted both in validation and test. Compared with the original CheXNet, the per-class AUROC of our reproduced model is almost the same. We have also proposed a slightly-improved model which achieves a mean AUROC of 0.847 (v.s. 0.841 of the original CheXNet).
+![RL Agent Core](Screenshot-2025-11-17-232Screenshot-2025-11-17-232Screenshot-2025-11-17-232Screenshot-2025-11-17-232 Output Visualizations
 
-|     Pathology      | [Wang et al.](https://arxiv.org/abs/1705.02315) | [Yao et al.](https://arxiv.org/abs/1710.10501) | [CheXNet](https://arxiv.org/abs/1711.05225) | Our Implemented CheXNet | Our Improved Model |
-| :----------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :---------------------: | :----------------: |
-|    Atelectasis     |                  0.716                   |                  0.772                   |                  0.8094                  |         0.8294          |       0.8311       |
-|    Cardiomegaly    |                  0.807                   |                  0.904                   |                  0.9248                  |         0.9165          |       0.9220       |
-|      Effusion      |                  0.784                   |                  0.859                   |                  0.8638                  |         0.8870          |       0.8891       |
-|    Infiltration    |                  0.609                   |                  0.695                   |                  0.7345                  |         0.7143          |       0.7146       |
-|        Mass        |                  0.706                   |                  0.792                   |                  0.8676                  |         0.8597          |       0.8627       |
-|       Nodule       |                  0.671                   |                  0.717                   |                  0.7802                  |         0.7873          |       0.7883       |
-|     Pneumonia      |                  0.633                   |                  0.713                   |                  0.7680                  |         0.7745          |       0.7820       |
-|    Pneumothorax    |                  0.806                   |                  0.841                   |                  0.8887                  |         0.8726          |       0.8844       |
-|   Consolidation    |                  0.708                   |                  0.788                   |                  0.7901                  |         0.8142          |       0.8148       |
-|       Edema        |                  0.835                   |                  0.882                   |                  0.8878                  |         0.8932          |       0.8992       |
-|     Emphysema      |                  0.815                   |                  0.829                   |                  0.9371                  |         0.9254          |       0.9343       |
-|      Fibrosis      |                  0.769                   |                  0.767                   |                  0.8047                  |         0.8304          |       0.8385       |
-| Pleural Thickening |                  0.708                   |                  0.765                   |                  0.8062                  |         0.7831          |       0.7914       |
-|       Hernia       |                  0.767                   |                  0.914                   |                  0.9164                  |         0.9104          |       0.9206       |
+Model Outputs
+Diagnosis Probability Table
+![Sample Output 1](Screenshot-2025-11-17-214Screenshot-2025-11-17-215**
+![Bar Chart](Screenshot-2025-11-15-105 Epochs**
+![Accuracy Graph](Screenshot-2025-11-15-094 Epochs**
+![Loss Graph](Screenshot-2025-11-15-065ability
 
-## Contributions
+Grad-CAM Overlays
+![Grad-CAM Single](Screenshot-2025-11-15-065Screenshot-2025-11-15-065Screenshot-2025-11-15-103 Details
 
-This work was collaboratively conducted by Xinyu Weng, Nan Zhuang, Jingjing Tian and Yingcheng Liu.
+Dataset: NIH ChestX-ray14 (official link)
 
-## Our Team
+Technologies: Python, PyTorch, Grad-CAM, RL (policy gradient methods), Matplotlib, OpenCV
 
-All of us are students/interns of Machine Intelligence Lab, Institute of Computer Science & Technology, Peking University, directed by Prof. Yadong Mu (http://www.muyadong.com).
+Key Models: CheXNet, VGG19, Custom RL Agent
+
+Outputs: Disease probabilities, interpretability overlays, automated reports
+
+Evaluation: Accuracy, loss, per-class metrics, and RL agent performance
