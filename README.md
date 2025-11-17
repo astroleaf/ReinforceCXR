@@ -1,92 +1,65 @@
-🚀 ReinforceCXR: Explainable Pneumonia Detection with Reinforcement Learning
-Overview
-ReinforceCXR is a cutting-edge artificial intelligence platform for pneumonia diagnosis from chest X-ray images. This system combines the deep feature extraction capabilities of convolutional neural networks (CNNs) with reinforcement learning (RL) for adaptive, automated, and explainable clinical reporting.
+# 🚀 PneumoSynthAI: Explainable Pneumonia Detection with Reinforcement Learning
 
-Unlike traditional classifiers, our approach provides both prediction and interpretability, empowering clinicians with transparent insights and the ability to trace every automated decision. PneumoSynthAI advances clinical AI by blending vision-based disease detection, RL-based adaptive intelligence, and visual explainability in one robust pipeline.
+## Overview
 
-Key Innovations
-Hybrid Deep Learning with RL:
-We merge CNNs (such as VGG19/CheXNet pre-trained on massive datasets) with a custom reinforcement learning agent. The CNN extracts high-dimensional representations from medical images; the RL agent learns policies for interpreting features and generating optimal diagnostic reports or recommendations.
+PneumoSynthAI is a state-of-the-art AI system designed for accurate and interpretable pneumonia diagnosis using chest X-ray images. This advanced framework integrates powerful convolutional neural networks (CNNs) to extract rich visual features and multi-label disease predictions with reinforcement learning (RL) to adaptively generate diagnostic reports and clinical decision support. The system incorporates Grad-CAM to provide transparent visual explanations of the model’s focus areas, aiding clinical trust and interpretability.
 
-Explainable Predictions:
-Using methods like Grad-CAM, each prediction is visually explained by highlighting the regions of the X-ray that most influenced the decision. This transparency is essential for building trust in clinical AI systems.
+![Screenshot 2025-11-17 214219.png]([https://github.com/user-attachments/assets/9a720a4e-9cc1-4e36-a292-9ce4ff601c9d](https://github.com/astroleaf/ReinforceCXR/blob/main/SCREENSHOTS/Screenshot%202025-11-17%20214219.png))
 
-Fully Automated Workflow:
-PneumoSynthAI processes input data from raw X-ray to diagnosis and report. The architecture includes:
+---
 
-Data preprocessing (normalization, augmentation)
+## Key Features and Innovations
 
-CNN-based feature extraction and classification
+- **Hybrid Learning Architecture:** Combines CNN-based feature extraction (using models like CheXNet and VGG19) with reinforcement learning agents to optimize diagnostic reporting.
+- **Explainability:** Uses Grad-CAM overlays to visualize image regions influential in disease detection, offering insights beyond typical “black box” AI methods.
+- **Automated End-to-End Pipeline:** From preprocessing input images, through model inference, to generating interpretable diagnostic reports and feedback-driven refinement via RL.
+- **Clinically Relevant Adaptive Reporting:** RL agent learns to refine and personalize reports with feedback signals that mirror clinical accuracy needs.
+- **Robust Evaluation:** Corroborated by multiple performance metrics including accuracy, precision, recall, F1 score, and RL reward metrics.
 
-RL-driven report generation
+---
 
-Output with interpretable overlays and probability tables
+## System Architecture
 
-Clinical Relevance:
-The RL agent is designed to optimize not just for accuracy but also for clinically meaningful feedback, such as balancing false positives/negatives and structuring reports as a human expert would.
+- **Preprocessing Module:** Handles image resizing, normalization, and augmentation to improve model robustness.
+- **CNN Feature Extraction:** Processes preprocessed images to generate multi-class disease probabilities.
+- **Grad-CAM Explainability:** Generates heatmaps illustrating model decision focus for each diagnosis.
+- **Reinforcement Learning Agent:** Utilizes CNN features as state inputs to adaptively generate diagnostic reports and decisions based on reward feedback.
+- **Report and Output Delivery:** Compiles all model outputs and visual explanations into human-readable formats for clinicians.
 
-Evaluation and Metrics:
-The system rigorously benchmarks model performance using accuracy, loss, per-class metrics, and RL-specific rewards (such as diagnosis quality and efficiency). Each stage in the pipeline is tested and validated to ensure reliable deployment.
+---
 
-System Architecture
-Preprocessing Module:
-Prepares input X-ray images (resizing, normalization, augmentation) for neural network consumption.
+## Dataset
 
-CNN Feature Extraction:
-Learns deep hierarchical patterns to classify X-rays as pneumonia-positive, negative, or with other thoracic pathologies.
+- Utilizes the public NIH ChestX-ray14 dataset, comprising over 100,000 images with 14 labeled thoracic diseases, enabling comprehensive model training and validation.  
+  [Dataset link](https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
-Grad-CAM Explainability:
-Adds a visual layer of interpretability, showing clinicians exactly where the network focused.
+---
 
-Reinforcement Learning Agent:
-Observes CNN features as "states" and iteratively generates more nuanced diagnostic reports or recommendations, refining its strategy via simulated clinical feedback.
+## Getting Started
 
-Report & Delivery Module:
-Aggregates all outputs into an actionable, clinician-friendly format.
+1. **Clone the repository and ensure all dependencies are installed.**
+2. **Download and prepare the NIH ChestX-ray14 dataset as specified.**
+3. **Run preprocessing scripts to cleanse and augment images properly.**
+4. **Train the CNN model or load a pretrained baseline like CheXNet.**
+5. **Train and evaluate the reinforcement learning agent on CNN features.**
+6. **Use the inference pipeline to input new images and obtain explainable diagnosis reports.**
 
-How This Is Different
-Integrates visual deep learning and RL in a single diagnosis pipeline.
+---
 
-Moves beyond one-shot classification—enabling adaptive, feedback-driven clinical reasoning.
+## Usage Insights
 
-Provides not only "what" the AI predicts, but transparently "why" and "how" each decision is made through interpretable overlays and textual explanations.
+- Designed for clinicians and researchers to streamline pneumonia detection workflows.
+- Hybrid RL methods elevate automated reporting by incorporating adaptive feedback.
+- Grad-CAM visualizations serve as valuable educational and diagnostic tools.
 
-Each module is independently modular, supporting future upgrades or integration with hospital information systems.
+---
 
-Getting Started
-Clone the repository and install dependencies.
+## Contribution & Support
 
-Prepare data: Download and organize the NIH ChestX-ray14 dataset (or your dataset of choice) as per the instructions.
+Contributions, bug reports, and feature requests are welcomed via GitHub issues and pull requests.  
+Please support this project by starring the repository ⭐ if you find it useful!
 
-Preprocess images: Run the provided scripts to format all training, validation, and test sets.
+---
 
-Model training:
+*This project exemplifies the future of AI-driven healthcare, advancing transparency, adaptability, and reliability in medical image analysis.*
 
-Train the CNN model (or load a pre-trained baseline such as CheXNet).
-
-Train the RL agent to generate human-like, feedback-driven reports.
-
-Inference and interpretation:
-
-Upload test images to get a table of disease probabilities and class predictions.
-
-Use code modules to visualize Grad-CAM overlays mapping diagnostic attention.
-
-Evaluation:
-
-Review provided scripts/notebooks for assessing model and agent performance, including diagnostic accuracy and report consistency.
-
-Usage and Applications
-Clinical Decision Support: Provides actionable, interpretable reports for radiologists or physicians.
-
-Teaching/Training: Visual explanations and adaptive RL-based feedback make it a powerful tool for medical education.
-
-Research: Open, modular codebase encourages extension for new diseases, imaging modalities, or further AI research.
-
-Dataset
-All experiments use the NIH ChestX-ray14 dataset (over 100,000 anonymized patient scans), which includes ground-truth labels for 14 thoracic pathologies. (Dataset: https://nihcc.app.box.com/v/ChestXray-NIHCC)
-
-Contributing
-We welcome pull requests or discussions! If you have ideas for improving the pipeline, additional explainability tools, or new RL agents, please get in touch via Issues or PR.
-
-PneumoSynthAI stands at the intersection of deep learning, reinforcement learning, and medical transparency—designed to move automated diagnosis from 'black box' to true digital assistant.
