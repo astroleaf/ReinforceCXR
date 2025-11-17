@@ -1,8 +1,8 @@
-# 🚀 PneumoSynthAI: Explainable Pneumonia Detection with Reinforcement Learning
+# 🚀 ReinforceCXR: Explainable Pneumonia Detection with Reinforcement Learning
 
 ## Overview
 
-PneumoSynthAI is a state-of-the-art AI system designed for accurate and interpretable pneumonia diagnosis using chest X-ray images. This advanced framework integrates powerful convolutional neural networks (CNNs) to extract rich visual features and multi-label disease predictions with reinforcement learning (RL) to adaptively generate diagnostic reports and clinical decision support. The system incorporates Grad-CAM to provide transparent visual explanations of the model’s focus areas, aiding clinical trust and interpretability.
+ReinforceCXR is a state-of-the-art AI system designed for accurate and interpretable pneumonia diagnosis using chest X-ray images. This advanced framework integrates powerful convolutional neural networks (CNNs) to extract rich visual features and multi-label disease predictions with reinforcement learning (RL) to adaptively generate diagnostic reports and clinical decision support. The system incorporates Grad-CAM to provide transparent visual explanations of the model’s focus areas, aiding clinical trust and interpretability.
 
 ---
 
@@ -92,6 +92,7 @@ Please support this project by starring the repository ⭐ if you find it useful
 ---
 
 *This project exemplifies the future of AI-driven healthcare, advancing transparency, adaptability, and reliability in medical image analysis.*
+
 
 
 
